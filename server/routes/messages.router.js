@@ -9,6 +9,18 @@ var MessageSchema = new Schema({
 
 var Message = mongoose.model('Message', MessageSchema, 'messages');
 
+router.get('/', function(req, res) {
+    Message.find({}, function(err, foundMessages) {
+        if (err) {
+            console.log('error', err);
+            res.sendStatus(201);
+        } else {
+            res.send(foundMessages);
+        }
+    });
+});
+
+
 router.post('/', function(req, res) {
     var messageToAdd = new Message(req.body);
     console.log('message posted: ', messageToAdd);
@@ -19,7 +31,7 @@ router.post('/', function(req, res) {
         } else {
             res.sendStatus(201);
         }
-    })
-})
+    });
+});
 
 module.exports = router;

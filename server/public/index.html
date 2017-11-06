@@ -12,6 +12,7 @@
     <title>Code Challenge 5</title>
 </head>
 <body ng-app="myApp">
+    is angular working? {{4 + 4}}
     <h1>Message Board</h1>
     <div ng-controller="MessageController as mc">
         <form ng-submit="mc.addMessage(mc.newMessage)">
@@ -19,6 +20,12 @@
             Message: <input type="text" ng-model="mc.newMessage.message">
             <button>Add Your Message!</button>
         </form>
+        <h2>Messages</h2>
+        <div ng-repeat="message in mc.messages">
+            <p>{{message}}</p>
+        </div>
+        
+
     </div>
    
 </body>
