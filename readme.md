@@ -10,7 +10,7 @@ Node.js
 Mongo
 
 ## To Do
-- [ ] Set up files
+- [x] Set up files
 - [ ] Spin up server
 - [ ] Add inputs to index.html for name and message with ng-click functions in controller
 - [ ] Create POST route for messages
