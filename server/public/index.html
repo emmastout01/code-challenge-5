@@ -8,11 +8,18 @@
     <script src="vendors/angular-route.min.js"></script>
     <script src="scripts/client.js"></script>
     <script src="scripts/controllers/messages.controller.js"></script>
-    <script src="scripts/services/messages.service.js"></script>
     <link rel="stylesheet" href="styles/style.css">
     <title>Code Challenge 5</title>
 </head>
-<body>
-   <h1>Message Board</h1> 
+<body ng-app="myApp">
+    <h1>Message Board</h1>
+    <div ng-controller="MessageController as mc">
+        <form ng-submit="mc.addMessage(mc.newMessage)">
+            Name: <input type="text" ng-model="mc.newMessage.name">
+            Message: <input type="text" ng-model="mc.newMessage.message">
+            <button>Add Your Message!</button>
+        </form>
+    </div>
+   
 </body>
 </html>
