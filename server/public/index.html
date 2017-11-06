@@ -22,7 +22,9 @@
         </form>
         <h2>Messages</h2>
         <div ng-repeat="message in mc.messages">
-            <p>{{message}}</p>
+            <p><strong>{{message.name}}</strong> says,</p>
+            <p>"{{message.message}}"</p>
+            <br>
         </div>
         
 
